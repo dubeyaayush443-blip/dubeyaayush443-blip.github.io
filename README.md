@@ -3,103 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieHub - Your Gateway to Films</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>MovieHub - Your Favorite Movies</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
         <div class="container">
-            <a href="#" class="logo">MovieHub</a>
+            <div id="branding">
+                <h1>MovieHub</h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
                     <li><a href="#">Genres</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero-section">
-            <!-- You could add a featured movie carousel here -->
-            <h2 class="section-title">Trending Now</h2>
-        </section>
-
-        <section class="movie-list">
-            <h2 class="section-title">New Releases</h2>
+    <div id="main-content" class="container">
+        <section id="showcase">
+            <h2>Featured Movies</h2>
             <div class="movie-grid">
-                <!-- Movie Card 1 -->
+                <!-- Example Movie Cards -->
                 <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="" alt="Movie Title 1">
-                        <div class="overlay">
-                            <a href="#" class="watch-button">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-info">
-                        <h3 class="movie-title">The Quantum Leap</h3>
-                        <p class="movie-year">2023</p>
-                        <p class="movie-genre">Sci-Fi, Adventure</p>
-                    </div>
+                    <img src="" alt="Movie 1 Poster">
+                    <h3>Movie Title 1</h3>
+                    <p>Action, Adventure</p>
                 </div>
-
-                <!-- Movie Card 2 -->
                 <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="" alt="Movie Title 2">
-                        <div class="overlay">
-                            <a href="#" class="watch-button">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-info">
-                        <h3 class="movie-title">Crimson Tide Mystery</h3>
-                        <p class="movie-year">2022</p>
-                        <p class="movie-genre">Thriller, Mystery</p>
-                    </div>
+                    <img src="" alt="Movie 2 Poster">
+                    <h3>Movie Title 2</h3>
+                    <p>Comedy, Romance</p>
                 </div>
-
-                <!-- Add more movie cards here -->
                 <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="" alt="Movie Title 3">
-                        <div class="overlay">
-                            <a href="#" class="watch-button">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-info">
-                        <h3 class="movie-title">Galactic Odysccccsey</h3>
-                        <p class="movie-year">2024</p>
-                        <p class="movie-genre">Sci-Fi, Space Opera</p>
-                    </div>
+                    <img src="" alt="Movie 3 Poster">
+                    <h3>Movie Title 3</h3>
+                    <p>Sci-Fi, Thriller</p>
                 </div>
-
                 <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="" alt="Movie Title 4">
-                        <div class="overlay">
-                            <a href="#" class="watch-button">Watch Now</a>
-                        </div>
-                    </div>
-                    <div class="movie-info">
-                        <h3 class="movie-title">The Last Samurai</h3>
-                        <p class="movie-year">2010</p>
-                        <p class="movie-genre">Action, Drama</p>
-                    </div>
+                    <img src="" alt="Movie 4 Poster">
+                    <h3>Movie Title 4</h3>
+                    <p>Drama, Horror</p>
                 </div>
-
-                <!-- Repeat for more movies -->
+                <!-- Add more movie cards as needed -->
             </div>
         </section>
-    </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 MovieHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </div>
+        <p>&copy; 2023 MovieHub. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Ad Overlay -->
+    <div id="adOverlay" class="ad-overlay">
+        <div class="ad-content">
+            <h2>Advertisement</h2>
+            <p>Please wait <span id="countdown">10</span> seconds.</p>
+            <div id="adTimerBar"></div>
+            <p><button id="skipAdButton">Skip Ad</button></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
