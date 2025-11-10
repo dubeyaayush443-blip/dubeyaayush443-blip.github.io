@@ -72,3 +72,34 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+<body>
+    <!-- AdSense auto ads code (usually placed in <head>) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+         crossorigin="anonymous"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push();
+    </script>
+
+    <header>...</header>
+
+    <div id="main-content">
+        <section>
+            <h2>My Content</h2>
+            <p>This is where your articles go...</p>
+
+            <!-- AdSense Display Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push();
+            </script>
+
+            <p>More content...</p>
+        </section>
+    </div>
+    ...
+</body>
