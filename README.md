@@ -3,133 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5-Second Image Timer</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #e0f7fa; /* Light cyan background */
-            margin: 0;
-        }
-
-        .container {
-            text-align: center;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #clickableImage {
-            width: 350px; /* Larger image */
-            height: auto;
-            cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            margin-top: 30px; /* Space for the timer text */
-        }
-
-        #clickableImage:hover {
-            transform: translateY(-5px) scale(1.03); /* Lift and slightly enlarge on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        #timerDisplay {
-            font-size: 1.8em; /* Larger text */
-            color: #004d40; /* Dark teal color */
-            font-weight: bold;
-            margin-bottom: 15px; /* Space between text and image */
-            opacity: 0; /* Hidden by default */
-            visibility: hidden; /* Also hidden */
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-            position: absolute; /* Position it above the image */
-            top: 10px; /* Adjust as needed */
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        #timerDisplay.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Styling when the timer is active */
-        .container.counting .timer-message {
-            color: #d32f2f; /* Red color for active countdown */
-        }
-
-        .container.counting #clickableImage {
-            cursor: not-allowed; /* Indicates it's temporarily disabled */
-            opacity: 0.8;
-            box-shadow: 0 6px 12px rgba(255, 0, 0, 0.3); /* Reddish shadow */
-        }
-    </style>
+    <title>MovieHub - Your Gateway to Films</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div id="timerDisplay">
-            <span class="timer-message">Click the image to start the 5-second timer!</span>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">MovieHub</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
         </div>
-        <img id="clickableImage" src="https://via.placeholder.com/350x250/00bcd4/ffffff?text=Click+Me+for+Timer" alt="Clickable Image for Timer">
-    </div>
+    </header>
 
-    <script>
-        const clickableImage = document.getElementById('clickableImage');
-        const timerDisplay = document.getElementById('timerDisplay');
-        const timerMessage = document.querySelector('.timer-message');
-        const container = document.querySelector('.container');
+    <main class="container">
+        <section class="hero-section">
+            <!-- You could add a featured movie carousel here -->
+            <h2 class="section-title">Trending Now</h2>
+        </section>
 
-        let timerRunning = false; // Flag to prevent multiple timers
-        const countdownDuration = 5000; // 5 seconds in milliseconds
+        <section class="movie-list">
+            <h2 class="section-title">New Releases</h2>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="" alt="Movie Title 1">
+                        <div class="overlay">
+                            <a href="#" class="watch-button">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Quantum Leap</h3>
+                        <p class="movie-year">2023</p>
+                        <p class="movie-genre">Sci-Fi, Adventure</p>
+                    </div>
+                </div>
 
-        clickableImage.addEventListener('click', function() {
-            // If the timer is already running, do nothing
-            if (timerRunning) {
-                return;
-            }
+                <!-- Movie Card 2 -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="" alt="Movie Title 2">
+                        <div class="overlay">
+                            <a href="#" class="watch-button">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Crimson Tide Mystery</h3>
+                        <p class="movie-year">2022</p>
+                        <p class="movie-genre">Thriller, Mystery</p>
+                    </div>
+                </div>
 
-            timerRunning = true; // Mark timer as running
-            container.classList.add('counting'); // Add class for visual feedback
+                <!-- Add more movie cards here -->
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="" alt="Movie Title 3">
+                        <div class="overlay">
+                            <a href="#" class="watch-button">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Galactic Odyssey</h3>
+                        <p class="movie-year">2024</p>
+                        <p class="movie-genre">Sci-Fi, Space Opera</p>
+                    </div>
+                </div>
 
-            // Change the initial message to "Counting down..."
-            timerMessage.textContent = "Counting down...";
-            timerDisplay.classList.add('visible'); // Show the timer display
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="" alt="Movie Title 4">
+                        <div class="overlay">
+                            <a href="#" class="watch-button">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Last Samurai</h3>
+                        <p class="movie-year">2010</p>
+                        <p class="movie-genre">Action, Drama</p>
+                    </div>
+                </div>
 
-            // Start the 5-second countdown
-            const timerInterval = setInterval(function() {
-                // This part is not strictly needed for a fixed 5-second timer,
-                // but it's useful if you wanted to show remaining seconds.
-                // For a fixed 5 seconds, we just need to know when it ends.
-            }, 1000); // Update every second (optional for this specific requirement)
+                <!-- Repeat for more movies -->
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 MovieHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
 
-            setTimeout(function() {
-                // When the 5 seconds are up:
-                timerDisplay.classList.remove('visible'); // Hide the timer display
-                timerMessage.textContent = "Timer finished!"; // Change message briefly
-
-                // Reset the timer state
-                timerRunning = false;
-                container.classList.remove('counting');
-
-                // Optionally, reset the message after a short delay
-                setTimeout(function() {
-                    timerMessage.textContent = "Click the image to start the 5-second timer!";
-                    clickableImage.style.cursor = 'pointer'; // Ensure cursor is reset
-                    clickableImage.style.opacity = '1'; // Ensure opacity is reset
-                }, 1500); // Reset message after 1.5 seconds
-
-                clearInterval(timerInterval); // Clear the interval if it was active
-            }, countdownDuration); // Execute after 5000 milliseconds
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
