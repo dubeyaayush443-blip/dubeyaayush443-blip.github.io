@@ -3,103 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieHub - Your Favorite Movies</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="calculator">
+        <input type="text" id="display" disabled> <!-- Display for input and results -->
+        <div class="buttons">
+            <!-- Numbers -->
+            <button class="btn number" data-value="7">7</button>
+            <button class="btn number" data-value="8">8</button>
+            <button class="btn number" data-value="9">9</button>
 
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>MovieHub</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Genres</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            <button class="btn number" data-value="4">4</button>
+            <button class="btn number" data-value="5">5</button>
+            <button class="btn number" data-value="6">6</button>
 
-    <div id="main-content" class="container">
-        <section id="showcase">
-            <h2>Featured Movies</h2>
-            <div class="movie-grid">
-                <!-- Example Movie Cards -->
-                <div class="movie-card">
-                    <img src="" alt="Movie 1 Poster">
-                    <h3>Movie Title 1</h3>
-                    <p>Action, Adventure</p>
-                </div>
-                <div class="movie-card">
-                    <img src="" alt="Movie 2 Poster">
-                    <h3>Movie Title 2</h3>
-                    <p>Comedy, Romance</p>
-                </div>
-                <div class="movie-card">
-                    <img src="" alt="Movie 3 Poster">
-                    <h3>Movie Title 3</h3>
-                    <p>Sci-Fi, Thriller</p>
-                </div>
-                <div class="movie-card">
-                    <img src="" alt="Movie 4 Poster">
-                    <h3>Movie Title 4</h3>
-                    <p>Drama, Horror</p>
-                </div>
-                <!-- Add more movie cards as needed -->
-            </div>
-        </section>
-    </div>
+            <button class="btn number" data-value="1">1</button>
+            <button class="btn number" data-value="2">2</button>
+            <button class="btn number" data-value="3">3</button>
 
-    <footer>
-        <p>&copy; 2023 MovieHub. All rights reserved.</p>
-    </footer>
+            <button class="btn number zero" data-value="0">0</button>
+            <button class="btn number" data-value=".">.</button>
 
-    <!-- Ad Overlay -->
-    <div id="adOverlay" class="ad-overlay">
-        <div class="ad-content">
-            <h2>Advertisement</h2>
-            <p>Please wait <span id="countdown">10</span> seconds.</p>
-            <div id="adTimerBar"></div>
-            <p><button id="skipAdButton">Skip Ad</button></p>
+            <!-- Operators -->
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn operator" data-value="-">-</button>
+            <button class="btn operator" data-value="*">&times;</button> <!-- Using HTML entity for multiplication -->
+            <button class="btn operator" data-value="/">&divide;</button> <!-- Using HTML entity for division -->
+
+            <!-- Control Buttons -->
+            <button class="btn clear" data-value="C">C</button>
+            <button class="btn equals" data-value="=">=</button>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-<body>
-    <!-- AdSense auto ads code (usually placed in <head>) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
-         crossorigin="anonymous"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push();
-    </script>
-
-    <header>...</header>
-
-    <div id="main-content">
-        <section>
-            <h2>My Content</h2>
-            <p>This is where your articles go...</p>
-
-            <!-- AdSense Display Ad -->
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-                 data-ad-slot="YOUR_AD_SLOT_ID"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push();
-            </script>
-
-            <p>More content...</p>
-        </section>
-    </div>
-    ...
-</body>
