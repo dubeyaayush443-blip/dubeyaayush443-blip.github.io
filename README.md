@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="movie-info">
-                        <h3 class="movie-title">Galactic Odyssey</h3>
+                        <h3 class="movie-title">Galactic Odysccccsey</h3>
                         <p class="movie-year">2024</p>
                         <p class="movie-genre">Sci-Fi, Space Opera</p>
                     </div>
