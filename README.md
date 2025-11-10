@@ -9,7 +9,8 @@
 </head>
 <body>
   <!-- Replace 'your-image.jpg' with your actual image name -->
-  <img id="clickableImage" src="your-image.jpg" alt="Click Me" style="cursor:pointer; max-width: 300px;" />
+  <img id="clickableImage" src="![Uploading image.png…]()
+" alt="Click Me" style="cursor:pointer; max-width: 300px;" />
 
   <div id="timer"></div>
   <div id="adSection">
